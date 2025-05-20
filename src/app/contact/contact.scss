@@ -1,0 +1,33 @@
+@import "../variables.module.scss";
+
+.contactTitle {
+  font-family: "Plus Jakarta Sans ExtraBold", serif;
+  color: white !important;
+  margin-top: 5vh;
+}
+.contactSubtitle {
+  font-family: "Plus Jakarta Sans", serif;
+  color: white !important;
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 7vh !important;
+}
+.contactRow {
+  background-color: $secondary-color !important;
+}
+.contactRow2 {
+  // margin-top: 5%;
+  margin-bottom: 10%;
+}
+.contactTitle3 {
+  font-family: "Plus Jakarta Sans ExtraBold", serif;
+  color: $primary-color !important;
+  margin-bottom: 5% !important;
+}
+.contactText {
+  font-family: "Plus Jakarta Sans", serif;
+  color: $primary-color !important;
+  text-align: justify;
+  font-size: 15px;
+//   margin-bottom: 5% !important;
+}

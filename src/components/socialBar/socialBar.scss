@@ -1,0 +1,39 @@
+@import "../../app/variables.module.scss";
+
+.socialBar {
+  background-color: $secondary-color;
+  // border: none;
+  // border-radius: 0;
+//   margin-top: 10%;
+  width: 100%;
+  padding: 40px;
+  // font-family: 'Alegreya Sans', serif;
+
+  &:hover {
+    border-color: $primary-color!important;
+    color: $primary-color!important;
+  }
+}
+:where(.css-dev-only-do-not-override-1iiovjv).ant-btn-default:not(
+    :disabled
+  ):not(.ant-btn-disabled):hover {
+  border-color: $primary-color;
+  color: $primary-color;
+}
+
+.socialBarButton {
+  // color: #00b96b;
+  // margin-left: 5%;
+  // size: 33px!important;
+  // padding: 5%;
+  width: 50px !important;
+  height: 50px;
+  // margin-right: 5%;
+}
+.socialBarTitle
+{
+  font-family: "Plus Jakarta Sans ExtraBold", serif;
+  color: white !important;
+  // font-size: 20px;
+  margin-bottom: 0 !important;
+}

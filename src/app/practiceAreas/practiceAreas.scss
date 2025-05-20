@@ -1,0 +1,39 @@
+@import "../variables.module.scss";
+
+.practiceAreasTitle {
+  font-family: "Plus Jakarta Sans ExtraBold", serif;
+  color: white !important;
+  margin-top: 5vh;
+}
+.practiceAreasSubtitle {
+  font-family: "Plus Jakarta Sans", serif;
+  color: white !important;
+  text-align: justify;
+  margin-top: 3vh;
+  margin-bottom: 7vh !important;
+}
+.practiceAreasRow {
+  background-color: $secondary-color !important;
+}
+.practiceAreasRow2 {
+  margin-bottom: 6%;
+}
+.practiceAreasCollapse {
+  background-color: $secondary-color !important;
+  // color: white!important;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  color: white;
+  font-family: "Plus Jakarta Sans ExtraBold", serif;
+}
+.ant-collapse .ant-collapse-content {
+  color: white;
+  font-family: "Plus Jakarta Sans", serif;
+}
+
+.ant-collapse-header-text {
+  font-size: 20px !important;
+}
+.practiceAreasIcon{
+    margin-right: 2%;
+}

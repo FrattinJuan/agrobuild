@@ -1,0 +1,25 @@
+@import "./variables.module.scss";
+
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected,
+.ant-menu-light .ant-menu-item-selected,
+.ant-menu-light > .ant-menu .ant-menu-item-selected,
+.ant-menu-light .ant-menu-submenu-selected > .ant-menu-submenu-title {
+  color: $secondary-color !important;
+}
+
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item-active::after,
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item:hover::after,
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected::after,
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected::after,
+.ant-menu-light.ant-menu-horizontal > .ant-menu-submenu-active::after,
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected::after,
+.ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected::after {
+  border-bottom-color: $secondary-color !important;
+}
+.ant-float-btn .ant-float-btn-body .ant-float-btn-content .ant-float-btn-icon{
+  width: 40px;
+}
+
+.ant-list .ant-list-item{
+  color: $secondary-color !important;
+}

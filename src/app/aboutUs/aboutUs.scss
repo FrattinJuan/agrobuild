@@ -1,0 +1,30 @@
+@import '../variables.module.scss';
+
+.aboutUsTitle {
+    font-family: 'Garamond', serif;
+    // color: $secondary-color!important;
+    color: white!important;
+    margin-top: 25vh;
+}
+
+.aboutUsSubtitle {
+    font-family: 'Alegreya Sans', serif;
+    // color: $primary-color!important;
+    color: white!important;
+    text-align: justify;
+    margin-top: 7vh;
+    margin-bottom: 35vh!important;
+    // display: flex;
+}
+.aboutUsRow{
+    background-color: $secondary-color!important;
+}
+.aboutUsRow2{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    // background-color: $primary-color!important;
+}
+
+.aboutUsCard {
+    border-radius: 0;
+}
