@@ -1,3 +1,59 @@
+# Agrobuild
+
+Agrobuild es una plataforma web desarrollada con [Next.js](https://nextjs.org/) orientada a ofrecer soluciones integrales para el sector agroindustrial. El proyecto brinda información sobre servicios de montaje, mantenimiento y optimización de infraestructuras productivas, así como un canal de contacto para consultas personalizadas.
+
+## Características principales
+
+- Presentación de servicios especializados para criaderos, plantas de acopio, infraestructura hidráulica, líneas de aire comprimido, mediciones eléctricas, estructuras metálicas y contratos de mantenimiento.
+- Interfaz moderna y responsiva, optimizada para distintos dispositivos.
+- Formulario de contacto para envío de consultas.
+- Integración con redes sociales y medios de contacto directo.
+- Uso de componentes de [Ant Design](https://ant.design/) para una experiencia de usuario profesional.
+- Desarrollado con Next.js y TypeScript para máxima performance y escalabilidad.
+
+## Instalación y uso
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/agrobuild.git
+   cd agrobuild
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+   # o
+   yarn install
+   ```
+
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   # o
+   yarn dev
+   ```
+
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
+
+## Estructura del proyecto
+
+- `/app`: Páginas principales y rutas de la aplicación.
+- `/components`: Componentes reutilizables (formularios, barras sociales, etc).
+- `/public`: Imágenes y recursos estáticos.
+- `/styles`: Archivos de estilos personalizados.
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, abre un issue o pull request para sugerir mejoras o reportar problemas.
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT.
+
+---
+
+Desarrollado por Agrobuild.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
