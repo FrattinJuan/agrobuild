@@ -75,7 +75,7 @@ export default function RootLayout({
               theme="light"
               mode="horizontal"
               defaultSelectedKeys={["1"]}
-              style={{ flex: 1, minWidth: 0 }}
+              style={{ flex: 1, minWidth: 0, marginLeft:"2%" }}
               items={items}
             ></Menu>
           </Header>

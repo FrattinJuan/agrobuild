@@ -1,13 +1,41 @@
 // components/ContactForm.js
-import React from "react";
-import { Form, Input, Button } from "antd";
+import React, { useState } from "react";
+import { Form, Input, Button, message } from "antd";
+
+// Puedes cambiar este email por el destinatario deseado
+const DESTINATION_EMAIL = "consultas@agrobuild.com.ar";
 
 const ContactForm = () => {
   const [form] = Form.useForm();
+  const [loading, setLoading] = useState(false);
 
-  const onFinish = (values: any) => {
-    console.log("Formulario enviado:", values);
-    // Aquí puedes manejar el envío de datos, como enviarlos a un backend o API
+  const onFinish = async (values: any) => {
+    setLoading(true);
+    try {
+      // Aquí deberías tener un endpoint en tu backend que procese el envío de emails
+      // Por ejemplo: /api/send-email
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...values,
+          to: DESTINATION_EMAIL,
+        }),
+      });
+
+      if (response.ok) {
+        message.success("¡Consulta enviada correctamente!");
+        form.resetFields();
+      } else {
+        message.error("Hubo un error al enviar la consulta. Intenta nuevamente.");
+      }
+    } catch (error) {
+      message.error("Hubo un error al enviar la consulta. Intenta nuevamente.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -45,7 +73,7 @@ const ContactForm = () => {
       </Form.Item>
 
       <Form.Item>
-        <Button type="primary" htmlType="submit" style={{ width: "100%" }}>
+        <Button type="primary" htmlType="submit" style={{ width: "100%" }} loading={loading}>
           Enviar
         </Button>
       </Form.Item>
