@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Form, Input, Button, message } from "antd";
 
 // Puedes cambiar este email por el destinatario deseado
-const DESTINATION_EMAIL = "consultas@agrobuild.com.ar";
+const DESTINATION_EMAIL = "info@agrobuild.com.ar";
 
 const ContactForm = () => {
   const [form] = Form.useForm();
@@ -24,7 +24,8 @@ const ContactForm = () => {
           to: DESTINATION_EMAIL,
         }),
       });
-
+      // console.log("Response:", response);
+      // Verifica si la respuesta es exitosa
       if (response.ok) {
         message.success("¡Consulta enviada correctamente!");
         form.resetFields();

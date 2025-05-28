@@ -2,25 +2,23 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
-  const { name, email, message } = await req.json();
-
-  const nodemailer = require("nodemailer");
-
-  // Configura tu transporte SMTP
+  const { name, email, message, to } = await req.json();
+     
+//   console.log("Received data:", { name, email, message, to });
   const transporter = nodemailer.createTransport({
-    host: "live.smtp.mailtrap.io", // Ejemplo: smtp.gmail.com
-    port: 587,
-    secure: false,
+    host: process.env.SMTP_HOST,
+    port: Number(process.env.SMTP_PORT),
+    secure: true,
     auth: {
-      user: "consultas@agrobuild.com.ar",
-      pass: "TU_PASSWORD", // Usa variables de entorno en producción
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
     },
   });
 
   try {
     await transporter.sendMail({
-      from: `"Agrobuild Web" <consultas@agrobuild.com.ar>`,
-      to: "consultas@agrobuild.com.ar",
+      from: `"Agrobuild Web" <${process.env.SMTP_USER}>`,
+      to: to || process.env.SMTP_USER,
       subject: "Nueva consulta desde Agrobuild",
       html: `
         <h3>Consulta desde Agrobuild</h3>
@@ -32,6 +30,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ ok: true });
   } catch (error) {
+    // console.error("Email error:", error);
     return NextResponse.json(
       { ok: false, error: (error as Error).message },
       { status: 500 }
