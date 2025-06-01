@@ -2,8 +2,7 @@
 import React, { useState } from "react";
 import { Form, Input, Button, message } from "antd";
 
-// Puedes cambiar este email por el destinatario deseado
-const DESTINATION_EMAIL = "info@agrobuild.com.ar";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xovwqqdj";
 
 const ContactForm = () => {
   const [form] = Form.useForm();
@@ -12,20 +11,19 @@ const ContactForm = () => {
   const onFinish = async (values: any) => {
     setLoading(true);
     try {
-      // Aquí deberías tener un endpoint en tu backend que procese el envío de emails
-      // Por ejemplo: /api/send-email
-      const response = await fetch("/api/send-email", {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
         headers: {
+          "Accept": "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ...values,
-          to: DESTINATION_EMAIL,
+          name: values.name,
+          email: values.email,
+          message: values.message,
         }),
       });
-      // console.log("Response:", response);
-      // Verifica si la respuesta es exitosa
+
       if (response.ok) {
         message.success("¡Consulta enviada correctamente!");
         form.resetFields();
@@ -74,7 +72,7 @@ const ContactForm = () => {
       </Form.Item>
 
       <Form.Item>
-        <Button type="primary" htmlType="submit" style={{ width: "100%" }} loading={loading}>
+        <Button type="primary" htmlType="submit" style={{ width: "100%", backgroundColor: "#30632F" }} loading={loading}>
           Enviar
         </Button>
       </Form.Item>

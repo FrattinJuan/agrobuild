@@ -15,19 +15,19 @@ export default function FooterBar() {
   const data = [
     {
       title:
-        "Miguel C. del Corro 661 - Piso 1 Of. 3 - C.P. X5000BGO - Córdoba, Argentina",
+        "Córdoba, Argentina",
       icon: <EnvironmentOutlined />,
-      link: "https://maps.app.goo.gl/81X9mtqwEpSmzNGx5",
+      link: "https://www.google.com.ar/maps/place/C%C3%B3rdoba+Province/@-32.2228173,-66.4121489,7z/data=!3m1!4b1!4m15!1m8!3m7!1s0x9432985f478f5b69:0xb0a24f9a5366b092!2zQ8OzcmRvYmEsIEPDs3Jkb2JhIFByb3ZpbmNl!3b1!8m2!3d-31.4200833!4d-64.1887761!16zL20vMDFrMDNy!3m5!1s0x942cd4a109dac635:0xe72d300f810e899e!8m2!3d-32.2968402!4d-63.580611!16zL20vMDF5NGZi?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D",
     },
     {
-      title: "+54 9 351 308 6599",
+      title: "+54 9 351 326 7517",
       icon: <PhoneOutlined />,
-      link: "https://api.whatsapp.com/send?phone=5493513086599&text=Hola,%20quisiera%20hacer%20una%20consulta%20...",
+      link: "https://api.whatsapp.com/send?phone=5493513267517&text=Hola,%20Federico%20quisiera%20hacer%20una%20consulta%20...",
     },
     {
-      title: "+54 9 351 747 2345",
+      title: "+54 9 351 528 2498",
       icon: <PhoneOutlined />,
-      link: "https://api.whatsapp.com/send?phone=54935174723455&text=Hola,%20quisiera%20hacer%20una%20consulta%20...",
+      link: "https://api.whatsapp.com/send?phone=3515282498&text=Hola,%20Nicolas%20quisiera%20hacer%20una%20consulta%20...",
     },
     {
       title: "info@agrobuild.com.ar",
